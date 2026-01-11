@@ -4,7 +4,7 @@ set -e  # Остановить скрипт при ошибке
 
 echo "[+] Добавление GPG ключа репозитория Caddy..."
 curl -1sLf 'https://dl.cloudsmith.io/public/caddy/stable/gpg.key' | \
-  sudo gpg --dearmor -o /usr/share/keyrings/caddy-stable-archive-keyring.gpg -y
+  sudo gpg --dearmor -o /usr/share/keyrings/caddy-stable-archive-keyring.gpg
 
 echo "[+] Добавление репозитория Caddy в sources.list..."
 curl -1sLf 'https://dl.cloudsmith.io/public/caddy/stable/debian.deb.txt' | \
